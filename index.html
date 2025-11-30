@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Your Favorite Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    
+    <header>
+        <div class="navbar">
+            <h1 class="logo">ShopEasy</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="cart"><i class="fas fa-shopping-cart"></i> Cart (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Big Sale This Week!</h2>
+            <p>Up to 50% off on all items. Grab your favorites now!</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    
+    <section class="products" id="products">
+        <h2 class="section-title">Our Products</h2>
+        <div class="product-grid">
+
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Headphones">
+                <h3>Wireless Headphones</h3>
+                <p class="price">$79.99 <span class="old-price">$129.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Watch">
+                <h3>Smart Watch</h3>
+                <p class="price">$199.99 <span class="old-price">$299.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Sneakers">
+                <h3>Running Sneakers</h3>
+                <p class="price">$89.99 <span class="old-price">$149.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="https://egoss.in/cdn/shop/files/GS-247_BROWN.jpg?v=1753878603&width=800" alt="Shoes">
+                <h3>Casual Leather Shoes</h3>
+                <p class="price">$119.99 <span class="old-price">$189.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="https://icon.in/cdn/shop/files/1_50b8664b-0c2b-477a-9d86-ed6fce060859.jpg?v=1756985540&width=1100" alt="Backpack">
+                <h3>Travel Backpack</h3>
+                <p class="price">$59.99 <span class="old-price">$99.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400" alt="Sunglasses">
+                <h3>Designer Sunglasses</h3>
+                <p class="price">$69.99 <span class="old-price">$129.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2025 ShopEasy. Made with full efforts</p>
+        <p>Follow us: 
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </p>
+    </footer>
+
+    <script>
+        
+        let cartCount = 0;
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                document.querySelector('.cart').innerHTML = `<i class="fas fa-shopping-cart"></i> Cart (${cartCount})`;
+                alert('Item added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>
